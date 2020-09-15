@@ -38,7 +38,7 @@ func print_array(array []int, size int) {
 }
 
 func baca_file() []int {
-	file, err := os.Open("data.txt")
+	file, err := os.Open("h.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -65,7 +65,7 @@ func main() {
 	var data = baca_file()
 	defer func() {
 		fmt.Println("\nEksekusi waktu ", time.Now().Sub(now))
-		fmt.Printf("Dari jumlah %d data\n", len(data))
+		fmt.Printf("Dari jumlah %d data\n\n", len(data))
 	}()
 	fmt.Println("================= ")
 	fmt.Println("Sequential Search")
