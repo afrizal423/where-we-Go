@@ -10,12 +10,29 @@ import (
 )
 
 func sequential_search(array []int, size int, nilai int) bool {
+	/*
+		Kita inisialisasikan variable ketemu bertipe boolean dengan nilai false
+	*/
 	ketemu := false
-
+	/*
+		lalu kita looping semua data yang ada pada array data, sesuai jumlah arraynya.
+		Dengan kondisi jika i kurang dari size dan variable ketemu bernilai false
+	*/
 	for i := 0; i < size && !ketemu; {
+		/*
+			Kita cek nilai yang ada pada array tersebut apakah sama dengan nilai yang dicari
+		*/
 		if array[i] == nilai {
+			/*
+				Jika nilainya yang ada pada array tersebut sama dengan nilai yang dicari,
+				maka kita akan menset variable ketemu menjadi true
+			*/
 			ketemu = true
 		} else {
+			/*
+				Jika nilainya yang ada pada array tersebut tidak sama dengan nilai yang dicari,
+				maka akan menambahkan nilai +1
+			*/
 			i++
 		}
 	}
@@ -71,8 +88,11 @@ func main() {
 	fmt.Println("Sequential Search")
 	fmt.Println("================= ")
 	fmt.Println("Masukkan angka yang dicari: ")
+	// kita beri variable cari sebagai penampung inputan
 	var cari int
+	// lalu kita akan memproses inputan
 	fmt.Scanln(&cari)
+	// panggil fungsinya
 	// fmt.Printf("Isi array: \n")
 	// print_array(data, len(data)) // tampilkan data jika mau
 	status_200 := sequential_search(data, len(data), cari)
