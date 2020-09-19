@@ -55,7 +55,7 @@ func print_array(array []int, size int) {
 }
 
 func baca_file() []int {
-	file, err := os.Open("h.txt")
+	file, err := os.Open("data.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
