@@ -10,8 +10,8 @@ type element struct {
 }
 
 type singleList struct {
-	jumlah_data int
-	head        *element
+	counter int
+	head    *element
 }
 
 func initList() *singleList {
@@ -35,15 +35,13 @@ func (s *singleList) tmbhData() {
 		semester: semester,
 	}
 
-	// fmt.Println(element)
-
 	if s.head == nil {
 		s.head = element
 	} else {
 		element.next = s.head
 		s.head = element
 	}
-	s.jumlah_data++
+	s.counter++
 
 	return
 }
@@ -60,7 +58,6 @@ func (s *singleList) Traverse() error {
 		fmt.Println("Semester : ", current.semester)
 		fmt.Println("-----------------------------------")
 		current = current.next
-		// fmt.Printf("%+v\n", current)
 	}
 	return nil
 }
@@ -70,7 +67,7 @@ func (s *singleList) HapusDiDepan() error {
 		return fmt.Errorf("Listnya kosong")
 	}
 	s.head = s.head.next
-	s.jumlah_data--
+	s.counter--
 	return nil
 }
 
@@ -91,21 +88,13 @@ func (s *singleList) HapusSingleData() error {
 			fmt.Println("Nama : ", current.nama)
 			fmt.Println("Semester : ", current.semester)
 			fmt.Println("-----------------------------------")
-			// s.head = current.next
-			s.jumlah_data--
-			// pPre := current
-			// anu := current.next
-			// fmt.Println(anu, pPre)
-			// pPre.next = anu.next
-			// pPre = nil
+			s.counter--
 			pPre.next = current.next
 			return nil
 		}
 
-		// pPre := current
 		pPre = current
 		current = current.next
-		// fmt.Println(current)
 	}
 
 	return nil
@@ -122,11 +111,10 @@ OUTER:
 	fmt.Println("3. Hapus Data Didepan")
 	fmt.Println("4. Hapus Single Data")
 	fmt.Println("--------------------------------------")
-	fmt.Println("Total data yang ada : ", singleList.jumlah_data)
+	fmt.Println("Total data yang ada : ", singleList.counter)
 	fmt.Println("--------------------------------------")
 	fmt.Println("\nmasukan pilihan:")
 	var pilih int
-	// lalu kita akan memproses inputan
 	fmt.Scanln(&pilih)
 
 	switch pilih {
