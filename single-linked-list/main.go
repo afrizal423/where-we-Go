@@ -83,7 +83,7 @@ func (s *singleList) HapusSingleData() error {
 		return fmt.Errorf("Listnya kosong")
 	}
 	current := s.head
-	// var pPre *string
+	var pPre *element
 	for current != nil {
 		if current.npm == npm {
 			fmt.Println("------- List Data Mahasiswa -------")
@@ -92,15 +92,18 @@ func (s *singleList) HapusSingleData() error {
 			fmt.Println("Semester : ", current.semester)
 			fmt.Println("-----------------------------------")
 			// s.head = current.next
-			// s.jumlah_data--
-			pPre := current
-			anu := current.next
-			fmt.Println(anu, pPre)
-			pPre.next = anu.next
-			pPre = nil
+			s.jumlah_data--
+			// pPre := current
+			// anu := current.next
+			// fmt.Println(anu, pPre)
+			// pPre.next = anu.next
+			// pPre = nil
+			pPre.next = current.next
+			return nil
 		}
 
 		// pPre := current
+		pPre = current
 		current = current.next
 		// fmt.Println(current)
 	}
