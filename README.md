@@ -16,7 +16,7 @@ Data Structures:
 
     - Circular Linked List (By [Name Of contributor](https://github.com/))
  - Queue (By [Name Of contributor](https://github.com/))
- - STack (By [Name Of contributor](https://github.com/))
+ - Stack (By [Name Of contributor](https://github.com/))
 
 ## How do contribute?
 - Read the README file in the folder you wish to contribute to this project, algorithms or data structures.
