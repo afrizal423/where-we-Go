@@ -10,13 +10,13 @@ int semester
 next * element
 }
 
-type singleList struct {
+type circularList struct {
 counter int
 head * element
 }
 
-func initList () * singleList {
-return & singleList {}
+func initList () * circularList {
+return & circularList {}
 }
 ```
 Please develop again using the Doubly Linked List. <br>
