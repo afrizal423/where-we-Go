@@ -15,7 +15,7 @@ Data Structures:
     - Doubly Linked List (By [Name Of contributor](https://github.com/))
 
     - Circular Linked List (By [Name Of contributor](https://github.com/))
- - Queue (By [Name Of contributor](https://github.com/))
+ - Queue (By [Felipe Henrique](https://github.com/felipehfs))
  - Stack (By [Name Of contributor](https://github.com/))
 
 ## How do contribute?
